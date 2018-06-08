@@ -1,0 +1,35 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+	RewriteBase /In2c1n3m@
+	
+	RewriteRule ^css/(.*)$ aset1/css/$1 [L]
+	RewriteRule ^js/(.*)$ aset1/js/$1 [L]
+	RewriteRule ^plugins/(.*)$ aset1/plugins/$1 [L]
+	RewriteRule ^images/(.*)$ aset1/images/$1 [L]
+	RewriteRule ^fonts/(.*)$ aset1/fonts/$1 [L]
+	RewriteRule ^vendor/(.*)$ aset1/vendor/$1 [L]
+	RewriteRule ^img/(.*)$ aset1/img/$1 [L]
+	RewriteRule ^video/(.*)$ aset1/video/$1 [L]
+	
+	#admin plugins
+	RewriteRule ^admin-css/(.*)$ aset2/css/$1 [L]
+	RewriteRule ^admin-js/(.*)$ aset2/js/$1 [L]
+	RewriteRule ^admin-plugins/(.*)$ aset2/plugins/$1 [L]
+	RewriteRule ^admin-images/(.*)$ aset2/images/$1 [L]
+	RewriteRule ^admin-fonts/(.*)$ aset2/fonts/$1 [L]
+	RewriteRule ^admin-vendor/(.*)$ aset2/vendor/$1 [L]
+	RewriteRule ^admin-img/(.*)$ aset2/img/$1 [L]
+
+    RewriteCond %{REQUEST_URI} ^Ins_Sy$t3m.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    RewriteCond %{REQUEST_URI} ^Ins_@pplicat10n.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+	
+	RewriteCond $1 !^(index\.php|images|robots\.txt)
+	Options All -Indexes
+</IfModule>

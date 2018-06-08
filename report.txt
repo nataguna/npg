@@ -1,0 +1,7 @@
+4-5-2018
+inscinema-registrasi.php
+penambahan file di front/view = inscinema-profile-student.php
+ -> penambahan file di inc = sidebarnya.php
+ -> penambahan file /student/view/table_form
+
+<img src='".base_url('assets/foto_user/'.$rows['foto'])."'>
